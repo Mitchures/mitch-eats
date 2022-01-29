@@ -39,7 +39,7 @@ export default function Categories() {
         {items.map((item, index) => (
           <View
             key={index}
-            style={{ ...styles.item, marginLeft: index === 0 ? 20 : 0 }}
+            style={{ ...styles.item, marginLeft: index === 0 ? 15 : 0 }}
           >
             <Image source={item.image} style={styles.image} />
             <Text style={styles.text}>{item.text}</Text>
@@ -52,9 +52,8 @@ export default function Categories() {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 5,
     backgroundColor: "white",
-    paddingVertical: 10,
+    paddingBottom: 15,
   },
   image: {
     width: 50,
@@ -62,11 +61,16 @@ const styles = StyleSheet.create({
     resizeMode: "contain",
   },
   text: {
+    marginTop: 5,
     fontSize: 13,
     fontWeight: "900",
   },
   item: {
+    backgroundColor: "#eee",
     alignItems: "center",
-    marginRight: 30,
+    marginRight: 15,
+    borderRadius: 15,
+    paddingVertical: 15,
+    paddingHorizontal: 20,
   },
 });
